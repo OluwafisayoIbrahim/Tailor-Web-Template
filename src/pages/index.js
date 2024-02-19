@@ -23,7 +23,7 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Name Of Cloth Store."
+                text="Tutored Outfits"
                 className="!text-5xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-sm">
@@ -37,7 +37,7 @@ export default function Home() {
                   md:p-2 md:px-4 md:text
                   "
                 >
-                  Contact Us <LinkArrow className={"w-3.5 ml-1"}/>
+                  Contact Us <LinkArrow className={"w-4 ml-1"}/>
                 </Link>
               </div>
             </div>

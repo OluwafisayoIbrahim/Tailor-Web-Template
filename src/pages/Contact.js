@@ -98,6 +98,7 @@ const Contact = () => {
               value={values.name}
               onChange={handleChange}
               onBlur={onBlur}
+              className="text-black dark:text-white"
             />
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
@@ -115,6 +116,7 @@ const Contact = () => {
               value={values.email}
               onChange={handleChange}
               onBlur={onBlur}
+              className="text-black dark:text-white"
             />
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
@@ -132,6 +134,7 @@ const Contact = () => {
               value={values.subject}
               onChange={handleChange}
               onBlur={onBlur}
+              className="text-black dark:text-white"
             />
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
@@ -150,6 +153,7 @@ const Contact = () => {
               value={values.message}
               onChange={handleChange}
               onBlur={onBlur}
+              className="text-black dark:text-white"
             />
             <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>

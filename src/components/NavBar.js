@@ -4,12 +4,10 @@ import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
   TwitterIcon,
-  DribbbleIcon,
-  GithubIcon,
-  LinkedInIcon,
-  PinterestIcon,
+  InstagramIcon,
   SunIcon,
   MoonIcon,
+  TikTokIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import ThemeSwitcher from "./hooks/ThemeSwitcher";
@@ -137,34 +135,16 @@ const NavBar = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            <GithubIcon />
+            <InstagramIcon />
           </motion.a>
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
-            className="w-6 mx-3"
+            className="w-7  mx-3"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            <LinkedInIcon />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            className="w-6 mx-3 bg-white rounded-full"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="https://twitter.com"
-            target={"_blank"}
-            className="w-6 ml-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <DribbbleIcon />
+            <TikTokIcon />
           </motion.a>
 
           <motion.button
@@ -234,43 +214,24 @@ const NavBar = () => {
             <motion.a
               href="https://twitter.com"
               target={"_blank"}
-              className="w-6 mx-3 bg-white rounded-full dark:bg-black sm:mx-1"
+              className="w-6 mx-3 dark:bg-black rounded-md"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <GithubIcon />
+              <InstagramIcon />
             </motion.a>
             <motion.a
               href="https://twitter.com"
               target={"_blank"}
-              className="w-6 mx-3 sm:mx-1"
+              className="w-7  mx-3 dark:bg-black rounded-md"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <LinkedInIcon />
+              <TikTokIcon />
             </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 mx-3 bg-white rounded-full sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              href="https://twitter.com"
-              target={"_blank"}
-              className="w-6 ml-3 sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <DribbbleIcon />
-            </motion.a>
-
             <motion.button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-6 sm:mx-1 flex items-center justify-center rounded-full p-1 ${
+              className={`absolute top-0 right-0 mt-2 mr-2 flex items-center justify-center rounded-full p-1 ${
                 mode === "light" ? "bg-black text-white" : "bg-white text-black"
               }`}
               target={"_blank"}
