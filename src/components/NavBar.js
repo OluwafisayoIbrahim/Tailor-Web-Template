@@ -231,17 +231,21 @@ const NavBar = () => {
             </motion.a>
             <motion.button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`absolute top-0 right-0 mt-2 mr-2 flex items-center justify-center rounded-full p-1 ${
-                mode === "light" ? "bg-black text-white" : "bg-white text-black"
-              }`}
-              target={"_blank"}
+              className={`absolute top-0 right-0 mt-2 mr-2 flex items-center justify-center rounded-full p-1 
+        ${mode === "light" ? "bg-black text-white" : "bg-white text-black"}
+        xl:w-16 xl:h-16 xl:p-2
+        lg:w-12 lg:h-12 lg:p-1
+        md:w-10 md:h-10 md:p-1
+        sm:w-8 sm:h-8 sm:p-1
+        xs:w-6 xs:h-6 xs:p-1`}
+              target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
               {mode === "dark" ? (
-                <SunIcon className={"fill-black"} />
+                <SunIcon className="fill-black" />
               ) : (
-                <MoonIcon className={"fill-black"} />
+                <MoonIcon className="fill-black" />
               )}
             </motion.button>
           </nav>
