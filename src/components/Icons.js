@@ -470,8 +470,8 @@ export const CircularText = ({ className, ...rest }) => (
 export const LinkArrow = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={10}
-    height={10}
+    width={5}
+    height={5}
     viewBox="0 0 24 24"
     className={`w-full h-auto ${className}`}
     {...rest}
