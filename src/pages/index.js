@@ -37,7 +37,7 @@ export default function Home() {
                   md:p-2 md:px-4 md:text
                   "
                 >
-                  Contact Us <LinkArrow className={"w-4 ml-1"}/>
+                  Contact Us <LinkArrow className={"w-4 ml-1 xl:w-16 xl:h-16 xl:p-2 lg:w-12 lg:h-12 lg:p-1 md:w-10 md:h-10 md:p-1 sm:w-8 sm:h-8 sm:p-1 xs:w-6 xs:h-6 xs:p-1"}/>
                 </Link>
               </div>
             </div>
