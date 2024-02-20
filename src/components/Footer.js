@@ -9,7 +9,7 @@ const Footer = () => {
         <span className="text-black dark:text-[#707070]">&copy; {new Date().getFullYear()} All Rights Reserved.</span>
         <div className="flex items-center lg:py-7 text-dark dark:text-[#707070]">
           Shop with{" "}
-          <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span> at (Store Name)
+          <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span> at Tutored Outfits.
         </div>
         <div className="flex items-center text-dark dark:text-[#707070]">
           Created&nbsp;by&nbsp;

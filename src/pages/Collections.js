@@ -85,8 +85,8 @@ const Collections = () => {
         />
       </Head>
       <Transition />
-      <main>
-        <h2 className="text-center text-4xl font-bold text-black mt-4 mb-4 dark:text-white">
+      <main >
+        <h2 className="text-center text-4xl font-bold text-black mt-16 mb-4 dark:text-white">
           Collections
         </h2>
         <Layout className="pt-16">

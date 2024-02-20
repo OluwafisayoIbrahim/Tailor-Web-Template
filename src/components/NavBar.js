@@ -8,6 +8,7 @@ import {
   SunIcon,
   MoonIcon,
   TikTokIcon,
+  DarkModeLogo,
 } from "./Icons";
 import { motion } from "framer-motion";
 import ThemeSwitcher from "./hooks/ThemeSwitcher";
@@ -107,7 +108,7 @@ const NavBar = () => {
       </button>
 
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav>
+        <nav className="-ml-10">
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/About" title="About" className="mx-4" />
           <CustomLink
@@ -118,7 +119,7 @@ const NavBar = () => {
           <CustomLink href="/Contact" title="Contact" className="ml-4" />
         </nav>
 
-        <nav className="flex items-center justify-center flex-wrap">
+        <nav className="flex items-center justify-center -mr-12 flex-wrap">
           <motion.a
             href="https://twitter.com"
             target={"_blank"}
@@ -253,7 +254,7 @@ const NavBar = () => {
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
+        <Logo mode={mode} />
       </div>
     </header>
   );

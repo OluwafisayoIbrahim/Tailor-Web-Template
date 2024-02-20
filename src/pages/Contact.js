@@ -75,7 +75,7 @@ const Contact = () => {
       </Head>
       <Transition />
       <main>
-        <h2 className="text-center text-4xl font-bold text-black mt-4 mb-4 dark:text-white">
+        <h2 className="text-center text-4xl font-bold text-black mt-16 mb-4 dark:text-white">
           Contact Us
         </h2>
         {error && (
