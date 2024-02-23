@@ -70,12 +70,30 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>CB | Contact</title>
-        <meta name="description" content="any description" />
+        <title>Tutored Outfits: Contact Us</title>
+        <meta name="description" content="contact us" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon_io/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon_io/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon_io/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
       </Head>
       <Transition />
       <main>
-        <h2 className="text-center text-4xl font-bold text-black mt-16 mb-4 dark:text-white">
+        <h2 className="text-center lg:pt-6 md:pt-6 sm:pt-5 xs:pt-5 text-4xl font-bold text-black mt-16 mb-4 dark:text-white">
           Contact Us
         </h2>
         {error && (

@@ -11,15 +11,35 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>CB | About</title>
+        <title>About | Tutored Outfits</title>
         <meta name="description" content="any description" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon_io/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon_io/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon_io/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
       </Head>
       <Transition />
       <main className="flex w-full flex-col justify-center items-center dark:text-white">
-        <Layout className="pt-16">
-          <div className="mb-16">
-            <AnimatedText text="We sell clothes!" className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8" />
-          </div>
+        <Layout className="pt-16 md:pt-20 sm:pt-24 xs:pt-28">
+          <AnimatedText
+            text="We sell clothes!"
+            className="mb-16 lg:text-6xl lg:mt-8 md:text-5xl md:mt-6 sm:text-3xl sm:mt-4 xs:text-2sxl xs:mt-2 sm:mb-8"
+          />
+
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4">
               <div>
@@ -43,7 +63,6 @@ const About = () => {
                   className="text-black dark:text-white"
                 />
               </div>
-
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8 dark:bg-black dark:border-white xl:col-span-4 md:border-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black dark:bg-white" />
@@ -51,7 +70,8 @@ const About = () => {
                 src={profilePic}
                 alt="Cloth Store"
                 className="w-full h-auto rounded-2xl"
-                priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

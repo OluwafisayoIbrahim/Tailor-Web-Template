@@ -634,7 +634,7 @@ export const LightModeLogo = () => {
   );
 };
 
-export const DarkModeLogo = ({ className, ...rest}) => {
+export const DarkModeLogo = () => {
   return (
     <svg
     id="svg"
@@ -642,9 +642,8 @@ export const DarkModeLogo = ({ className, ...rest}) => {
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={200}
     height={200}
-    viewBox="0, 0, 400,400"
-    className={`w-full h-auto ${className}`}
-    {...rest}
+    viewBox="0 0 400 400"
+    
   >
     <g id="svgg">
       <path
@@ -653,6 +652,7 @@ export const DarkModeLogo = ({ className, ...rest}) => {
         stroke="none"
         fill="#f5f5f5"
         fillRule="evenodd"
+        
       />
       <path
         id="path1"
