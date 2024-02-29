@@ -2,15 +2,16 @@ import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import Pic1 from "../../website images/HomeImage1.jpeg";
-import Pic2 from "../../website images/HomeImage2.jpeg";
+import Pic1 from "../../website images/Pic 3.jpeg";
+import Pic2 from "../../website images/Pic 5.jpeg";
+import Pic3 from "../../website images/Pic 9.jpeg";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Transition from "@/components/Transition";
 
-const images = [Pic1, Pic2];
+const images = [Pic1, Pic2, Pic3];
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -47,6 +48,7 @@ export default function Home() {
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
       </Head>
+      <Transition />
       <main className="flex items-center text-black w-full min-h-screen dark:text-white">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
@@ -55,16 +57,14 @@ export default function Home() {
                 <motion.div
                   key={currentImageIndex}
                   initial={{ x: 30, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
+                  animate={{ x: [100, 20, 10], opacity: 1 }}
                   exit={{ x: -30, opacity: 0 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                 >
                   <Image
                     src={images[currentImageIndex]}
                     alt="Home Pic"
-                    className="w-[60%] h-[60%] my-10 lg:ml-32 lg:hidden md:inline-block md:h-[85%] md:w-[85%] md:mx-6 md:my-12 rounded-xl md:rounded-2xl"
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="w-[70%] h-[70%] my-10 lg:ml-32 lg:hidden md:inline-block md:h-[80%] md:w-[80%] md:mx-6 md:my-12 rounded-xl md:rounded-2xl"
                   />
                 </motion.div>
               </AnimatePresence>

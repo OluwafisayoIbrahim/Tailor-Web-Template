@@ -108,7 +108,7 @@ const NavBar = () => {
       </button>
 
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav className="-ml-10">
+        <nav className="-ml-10 xl:-mx-12">
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/About" title="About" className="mx-4" />
           <CustomLink
@@ -253,7 +253,7 @@ const NavBar = () => {
         </motion.div>
       ) : null}
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+      <div className="absolute left-[50%] top-2 translate-x-[-50%] xl:mx-7 md:mx-3">
         <Logo mode={mode} />
       </div>
     </header>

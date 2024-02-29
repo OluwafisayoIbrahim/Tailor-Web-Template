@@ -642,7 +642,7 @@ export const DarkModeLogo = () => {
     xmlnsXlink="http://www.w3.org/1999/xlink"
     width={200}
     height={200}
-    viewBox="0 0 400 400"
+    viewBox="0 25 400 400"
     
   >
     <g id="svgg">
