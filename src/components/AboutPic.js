@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import Image from "next/image";
 
 const AboutPic = () => {
@@ -66,10 +66,10 @@ const AboutPic = () => {
         
       />
       <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 left-5 md:left-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactLeft onClick={PrevSlide} size={30} />
+        <AiOutlineArrowLeft onClick={PrevSlide} size={30} />
       </div>
       <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 right-5 md:right-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactRight onClick={NextSlide} size={30} />
+        <AiOutlineArrowRight onClick={NextSlide} size={30} />
       </div>
     </div>
   );
