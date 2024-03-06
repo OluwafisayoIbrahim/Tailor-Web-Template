@@ -1,6 +1,4 @@
-"use client"
-import React, { useState } from "react";
-import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid"
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 
 const AboutPic = () => {
@@ -41,21 +39,45 @@ const AboutPic = () => {
   ];
 
   const [currentPic, setCurrentPic] = useState(0);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
-  const PrevSlide = () => {
-    const isFirstSlide = currentPic === 0;
-    const newPic = isFirstSlide ? PicSlides.length - 1 : currentPic - 1;
-    setCurrentPic(newPic);
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
   };
-  const NextSlide = () => {
-    const isLastSlide = currentPic === PicSlides.length - 1;
-    const newPic = isLastSlide ? 0 : currentPic + 1;
-    setCurrentPic(newPic);
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      // Swiped left
+      nextSlide();
+    } else if (touchEndX.current - touchStartX.current > 50) {
+      // Swiped right
+      prevSlide();
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
+  const prevSlide = () => {
+    setCurrentPic((prev) => (prev === 0 ? PicSlides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentPic((prev) => (prev === PicSlides.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <div className="col-span-3 relative items-center h-max rounded-2xl group p-2 xl:col-span-5 md:border-1 md:col-span-6 flex justify-center">
-      <div className="absolute top-0 -right-3 -z-10 rounded-[2rem]" />
+      <p className="hidden xl:hidden lg:hidden md:block sm:block xs:block absolute top-2 left-2 text-white bg-black bg-opacity-50 rounded p-2 z-10">
+        Swipe left or right to change pic
+      </p>
+      <button className="prev md:hidden lg:hidden sm:hidden xs:hidden underline" onClick={prevSlide} style={{ marginRight: "10px" }}>
+        Prev
+      </button>
       <Image
         src={PicSlides[currentPic].url}
         alt="Cloth Store"
@@ -64,14 +86,13 @@ const AboutPic = () => {
         className="w-[65%] h-[60%] rounded-2xl md:w-full md:h-auto hover:cursor-pointer duration-500"
         priority
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       />
-      <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 left-5 md:left-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <ArrowLeftIcon onClick={PrevSlide} size={30} />
-      </div>
-      <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 right-5 md:right-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <ArrowRightIcon onClick={NextSlide} size={30} />
-      </div>
+      <button className="next md:hidden lg:hidden sm:hidden xs:hidden underline" onClick={nextSlide} style={{ marginLeft: "10px" }}>
+        Next
+      </button>
     </div>
   );
 };
