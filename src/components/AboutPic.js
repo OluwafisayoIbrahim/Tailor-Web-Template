@@ -1,5 +1,6 @@
+"use client"
 import React, { useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import Image from "next/image";
 
 const AboutPic = () => {
@@ -66,10 +67,10 @@ const AboutPic = () => {
         
       />
       <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 left-5 md:left-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <ChevronLeftIcon onClick={PrevSlide} size={30} />
+        <FaArrowLeft onClick={PrevSlide} size={30} />
       </div>
       <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 right-5 md:right-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <ChevronRightIcon onClick={NextSlide} size={30} />
+        <FaArrowRight onClick={NextSlide} size={30} />
       </div>
     </div>
   );
