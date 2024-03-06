@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid"
 import Image from "next/image";
 
 const AboutPic = () => {
@@ -67,10 +67,10 @@ const AboutPic = () => {
         
       />
       <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 left-5 md:left-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <FaArrowLeft onClick={PrevSlide} size={30} />
+        <ArrowLeftIcon onClick={PrevSlide} size={30} />
       </div>
       <div className="hidden group-hover:block absolute md:block top-1/2 -translate-x-0 right-5 md:right-0 transform -translate-y-1/2 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <FaArrowRight onClick={NextSlide} size={30} />
+        <ArrowRightIcon onClick={NextSlide} size={30} />
       </div>
     </div>
   );
