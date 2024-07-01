@@ -5,8 +5,8 @@ const ClothingCard = ({ imgUrl, title, description, category }) => {
   return (
     <div>
       <div
-        className="h-52 md:h-72 rounded-t-xl relative"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+        className="h-80 md:h-72 rounded-t-xl relative"
+        style={{ background: `url(${imgUrl}) no-repeat center center`, backgroundSize: "cover"}}
       >
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-8 px-4">

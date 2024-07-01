@@ -70,7 +70,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Tutored Outfits: Contact Us</title>
+        <title>Contact Us</title>
         <meta name="description" content="contact us" />
         <link
           rel="apple-touch-icon"

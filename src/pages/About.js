@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About | Tutored Outfits</title>
+        <title>About</title>
         <meta name="description" content="any description" />
         <link
           rel="apple-touch-icon"
@@ -36,7 +36,7 @@ const About = () => {
       <main className="flex w-full flex-col justify-center items-center dark:text-white">
         <Layout className="pt-16 md:pt-20 sm:pt-24 xs:pt-28">
           <AnimatedText
-            text="We sell clothes!"
+            text="About Us"
             className="mb-16 lg:text-6xl lg:mt-8 md:text-5xl md:mt-6 sm:text-3xl sm:mt-4 xs:text-2sxl xs:mt-2 sm:mb-8"
           />
 
@@ -44,17 +44,17 @@ const About = () => {
             <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4">
               <div>
                 <h2 className="mb-4 text-lg font-bold uppercase text-black/75 dark:text-white">
-                  About Us
+                  Hello There 👋
                 </h2>
               </div>
               <div className="h-80 w-auto lg:w-auto xl:w-fit md:w-80 xs-w-80 sm:w-80 overflow-hidden xl:col-span-8 xl:flex-row">
                 <TypeAnimation
                   sequence={[
-                    "Welcome to [Store Name], your ultimate destination for fashion that seamlessly combines comfort and style. Explore our curated collection featuring contemporary designs and timeless classics, offering a versatile range for every occasion.",
+                    "Welcome to Tutored Outfits, your ultimate destination for fashion that seamlessly combines comfort and style. Explore our curated collection featuring contemporary designs and timeless classics, offering a versatile range for every occasion.",
                     1000,
-                    "Our store takes pride in sourcing clothing from both local and international designers, ensuring a unique selection that caters to diverse tastes. From casual everyday wear to sophisticated ensembles, [Store Name] has you covered with quality and individuality.",
+                    "Our store takes pride in sourcing clothing from both local and international designers, ensuring a unique selection that caters to diverse tastes. From casual everyday wear to sophisticated ensembles, Tutored Outfits has you covered with quality and individuality.",
                     1000,
-                    "Customer satisfaction is at the core of our mission. With a friendly and knowledgeable staff, we are committed to providing a stress-free and enjoyable shopping experience. Discover a world of fashion at [Store Name], where each garment tells a story and reflects your personal style.",
+                    "Customer satisfaction is at the core of our mission. With a friendly and knowledgeable staff, we are committed to providing a stress-free and enjoyable shopping experience. Discover a world of fashion at Tutored Outfits, where each garment tells a story and reflects your personal style.",
                     1000,
                   ]}
                   wrapper="p"
