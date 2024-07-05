@@ -121,7 +121,7 @@ const NavBar = () => {
 
         <nav className="flex items-center justify-center -mr-12 flex-wrap">
           <motion.a
-            href="https://twitter.com"
+            href="https://x.com/tutoredoutfits"
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -130,7 +130,7 @@ const NavBar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://www.instagram.com/tutoredofficial/?igsh=MTc5YW12dW1lbmlxOA%3D%3D"
             target={"_blank"}
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
@@ -139,7 +139,7 @@ const NavBar = () => {
             <InstagramIcon />
           </motion.a>
           <motion.a
-            href="https://twitter.com"
+            href="https://www.tiktok.com/@tutored_?_t=8nlkJwn64lq&_r=1"
             target={"_blank"}
             className="w-7  mx-3"
             whileHover={{ y: -2 }}
@@ -204,7 +204,7 @@ const NavBar = () => {
 
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
-              href="https://twitter.com"
+              href="https://x.com/tutoredoutfits"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -213,7 +213,7 @@ const NavBar = () => {
               <TwitterIcon />
             </motion.a>
             <motion.a
-              href="https://twitter.com"
+              href="https://www.instagram.com/tutoredofficial/?igsh=MTc5YW12dW1lbmlxOA%3D%3D"
               target={"_blank"}
               className="w-6 mx-3 dark:bg-black rounded-md"
               whileHover={{ y: -2 }}
@@ -222,7 +222,7 @@ const NavBar = () => {
               <InstagramIcon />
             </motion.a>
             <motion.a
-              href="https://twitter.com"
+              href="https://www.tiktok.com/@tutored_?_t=8nlkJwn64lq&_r=1"
               target={"_blank"}
               className="w-7  mx-3 dark:bg-black rounded-md"
               whileHover={{ y: -2 }}

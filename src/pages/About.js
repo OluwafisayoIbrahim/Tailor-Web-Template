@@ -37,18 +37,18 @@ const About = () => {
         <Layout className="pt-16 md:pt-20 sm:pt-24 xs:pt-28">
           <AnimatedText
             text="About Us"
-            className="mb-16 lg:text-6xl lg:mt-8 md:text-5xl md:mt-6 sm:text-3xl sm:mt-4 xs:text-2sxl xs:mt-2 sm:mb-8"
+            className="mb-16 lg:text-6xl lg:mt-8 md:text-5xl md:mt-6 sm:text-3xl sm:mt-4 xs:text-2xl xs:mt-2 sm:mb-8 text-center"
           />
 
           <div className="grid w-full grid-cols-6 gap-16 sm:gap-8">
-            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4">
+            <div className="col-span-6 sm:col-span-6 md:col-span-4 xs:col-span-2">
               <div>
                 <h2 className="mb-4 text-lg font-bold uppercase text-black/75 dark:text-white">
                   Hello There 👋
                 </h2>
               </div>
-              <div className="h-80 w-auto lg:w-auto xl:w-fit md:w-80 xs-w-80 sm:w-80 overflow-hidden xl:col-span-8 xl:flex-row">
-                <TypeAnimation
+              <div className="h-80 w-full lg:w-auto xl:w-full md:w-80 xs-w-80 sm:w-80 overflow-hidden xl:col-span-8 xl:flex-row">
+              <TypeAnimation
                   sequence={[
                     "Welcome to Tutored Outfits, your ultimate destination for fashion that seamlessly combines comfort and style. Explore our curated collection featuring contemporary designs and timeless classics, offering a versatile range for every occasion.",
                     1000,
@@ -60,11 +60,11 @@ const About = () => {
                   wrapper="p"
                   speed={10}
                   repeat={Infinity}
-                  className="text-black dark:text-white"
+                  className="text-black dark:text-white "
                 />
               </div>
             </div>
-            <AboutPic />
+            {/* <AboutPic /> */}
           </div>
         </Layout>
       </main>

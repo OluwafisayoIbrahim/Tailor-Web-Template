@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import ClothingCard from "./ClothingCard";
 import { motion } from "framer-motion";
 import Transition from "@/components/Transition";
-import Link from "next/link"
+import Link from "next/link";
 
 const Collections = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -19,64 +19,64 @@ const Collections = () => {
       title: "Wendy Dress",
       image: "/images/website-images/Pic3.jpeg",
       category: "Dresses",
-      description: "₦14,500"
+      description: "₦14,500",
     },
     {
       id: 2,
       title: "Zee Dress",
       image: "/images/website-images/Pic9.jpeg",
       category: "Dresses",
-      description: "₦15,500"
+      description: "₦15,500",
     },
     {
       id: 3,
       title: "Cap Sleeve Chic Dress",
       image: "images/website-images/Pic5.jpeg",
       category: "Dresses",
-      description: "₦15,000"
+      description: "₦15,000",
     },
     {
       id: 4,
       title: "Blazer Gown",
       image: "/images/website-images/Pic1.jpeg",
       category: "Dresses",
-      description: "₦20,000"
+      description: "₦20,000",
     },
     {
       id: 5,
       title: "RiRi Dress",
       image: "/images/website-images/Pic2.jpeg",
       category: "Dresses",
-      description: "₦15,000"
+      description: "₦15,000",
     },
     {
       id: 6,
       title: "Colourful two piece with ruched sides",
       image: "/images/website-images/Pic6.jpeg",
       category: "Two piece set",
-      description: "₦16,000"
+      description: "₦16,000",
     },
     {
       id: 7,
       title: "Nassy Set",
       image: "/images/website-images/Pic10.jpeg",
       category: "Two piece set",
-      description: "₦18,000"
+      description: "₦18,000",
     },
     {
       id: 8,
       title: "Keji Set",
       image: "/images/website-images/Pic11.jpeg",
       category: "Two piece set",
-      description: "₦15,500"
+      description: "₦15,500",
     },
     {
       id: 9,
       title: "Blazer Set",
       image: "/images/website-images/Pic7.jpeg",
       category: "Two piece set",
-      description: "₦24,000"
-    }
+      description: "₦24,000",
+    },
   ];
 
   const filteredClothingItems =
@@ -145,21 +145,25 @@ const Collections = () => {
         <link rel="manifest" href="/favicon_io/site.webmanifest"></link>
       </Head>
       <Transition />
-      <main >
+      <main>
         <h2 className="text-center lg:pt-6 md:pt-6 sm:pt-5 xs:pt-5 text-4xl font-bold text-black mt-16 mb-4 dark:text-white">
           Collections
         </h2>
         <div className="items-center text-center font-light text-black dark:text-white mt-10">
-          Click&nbsp;
+          While closely following the U.K standard sizing, this sizing is unique to Tutored.
+          <br />
+          Before you order, we recommend you follow the size guide or send in
+          your measurements. <br /> Click&nbsp;
           <Link
-            href="/dummy.pdf"
+            href="/SIZE-CHART.pdf"
             className="underline underline-offset-2"
             target="_blank"
-          > 
+          >
             here
           </Link>
-           &nbsp;to view the size chart.
+          &nbsp;to view the size chart.
         </div>
+
         <Layout className="pt-16">
           <div className="mx-12">
             <select
@@ -187,7 +191,7 @@ const Collections = () => {
                     title={item.title}
                     imgUrl={item.image}
                     category={item.category}
-                    description = {item.description}
+                    description={item.description}
                   />
                 </motion.div>
               ))}
