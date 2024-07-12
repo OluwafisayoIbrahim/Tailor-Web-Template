@@ -9,6 +9,14 @@ import {
   MoonIcon,
   TikTokIcon,
   DarkModeLogo,
+  LightHomeIcon,
+  DarkHomeIcon,
+  LightAboutIcon,
+  DarkAboutIcon,
+  LightCollectionIcon,
+  DarkCollectionIcon,
+  LightContactIcon,
+  DarkContactIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import ThemeSwitcher from "./hooks/ThemeSwitcher";
@@ -31,7 +39,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   );
 };
 
-const CustomMobileLink = ({ href, title, className = "", toggle }) => {
+const CustomMobileLink = ({ href, title, className = "", toggle, IconLight, IconDark, mode }) => {
   const router = useRouter();
 
   const handleClick = () => {
@@ -41,10 +49,12 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
   return (
     <button
-      href={href}
-      className={`${className} relative group text-white dark:text-black my-2`}
+      className={`${className} relative group flex items-center text-white dark:text-black my-2`}
       onClick={handleClick}
     >
+      <span className="mr-0.5 flex items-center">
+        {IconLight && IconDark && (mode === 'dark' ? <IconDark /> : <IconLight />)}
+      </span>
       {title}
 
       <span
@@ -57,6 +67,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
     </button>
   );
 };
+
 
 const NavBar = () => {
   const [mode, setMode] = ThemeSwitcher();
@@ -181,24 +192,36 @@ const NavBar = () => {
               title="Home"
               className=""
               toggle={handleClick}
+              IconLight={DarkHomeIcon}
+              IconDark={LightHomeIcon}
+              mode={mode}
             />
             <CustomMobileLink
               href="/About"
               title="About"
               className=""
               toggle={handleClick}
+              IconLight={LightAboutIcon}
+              IconDark={DarkAboutIcon}
+              mode={mode}
             />
             <CustomMobileLink
               href="/Collections"
               title="Collections"
               className=""
               toggle={handleClick}
+              IconLight={LightCollectionIcon}
+              IconDark={DarkCollectionIcon}
+              mode={mode}
             />
             <CustomMobileLink
               href="/Contact"
               title="Contact"
               className=""
               toggle={handleClick}
+              IconLight={LightContactIcon}
+              IconDark={DarkContactIcon}
+              mode={mode}
             />
           </nav>
 

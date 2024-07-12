@@ -4,7 +4,7 @@ import Head from "next/head";
 import { TypeAnimation } from "react-type-animation";
 import AnimatedText from "@/components/AnimatedText";
 import Transition from "@/components/Transition";
-import AboutPic from "@/components/AboutPic";
+// import AboutPic from "@/components/AboutPic";
 
 
 const About = () => {
