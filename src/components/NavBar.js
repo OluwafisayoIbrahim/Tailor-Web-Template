@@ -225,20 +225,20 @@ const NavBar = () => {
             />
           </nav>
 
-          <nav className="flex items-center justify-center flex-wrap mt-2">
+          <nav className="flex items-center justify-center flex-wrap mt-10 ml-2">
             <motion.a
               href="https://x.com/tutoredoutfits"
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 sm:mx-1"
+              className="w-12 mx-3 dark:bg-black rounded-md"
             >
               <TwitterIcon />
             </motion.a>
             <motion.a
               href="https://www.instagram.com/tutoredofficial/?igsh=MTc5YW12dW1lbmlxOA%3D%3D"
               target={"_blank"}
-              className="w-6 mx-3 dark:bg-black rounded-md"
+              className="w-12 mx-3 dark:bg-black rounded-md"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -247,7 +247,7 @@ const NavBar = () => {
             <motion.a
               href="https://www.tiktok.com/@tutored_?_t=8nlkJwn64lq&_r=1"
               target={"_blank"}
-              className="w-7  mx-3 dark:bg-black rounded-md"
+              className="w-12 mx-3 dark:bg-black rounded-md"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
